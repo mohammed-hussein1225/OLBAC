@@ -25,7 +25,7 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="products.html">
+              <a href="product.html">
                 <img src="images/slide6.jpg" class="w-100 d-block" />
               </a>
             </div>
@@ -2697,14 +2697,14 @@
     <script src="js/main.js"></script>
 
     <script>
-      fetch("header.html")
+      fetch("sections/header.html")
         .then((response) => response.text())
         .then(
           (data) =>
             (document.getElementById("header-container").innerHTML = data)
         );
 
-      fetch("footer.html")
+      fetch("sections/footer.html")
         .then((response) => response.text())
         .then(
           (data) =>

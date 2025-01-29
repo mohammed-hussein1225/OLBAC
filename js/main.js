@@ -339,11 +339,21 @@ const inputs = document.querySelectorAll(
 );
 
 const currentPage = window.location.pathname.split("/").pop();
+console.log(currentPage);
 
-links.forEach((link, index) => {
+inputs.forEach((input, index) => {
+  const link = links[index];
+
   if (link.getAttribute("href") === currentPage) {
-    inputs[index].checked = true;
+    input.checked = true;
   } else {
-    inputs[index].checked = false;
+    input.checked = false;
   }
+
+  // إضافة حدث عند تغيير حالة الـ checkbox
+  input.addEventListener("change", function () {
+    if (!this.checked) {
+      window.location.href = "product.html"; // التوجيه إلى صفحة product.html عند إلغاء التحديد
+    }
+  });
 });
