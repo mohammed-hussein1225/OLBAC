@@ -1,3 +1,194 @@
+const swiperbra = new Swiper(".brand .swiper", {
+  loop: true, // جعل السلايدر يعمل بشكل دائري
+  autoplay: {
+    delay: 3000, // تأخير 3 ثواني بين الشرائح
+    disableOnInteraction: false,
+  },
+
+  slidesPerView: 4, // عدد الشرائح المرئية في نفس الوقت
+  spaceBetween: 20, // المسافة بين الشرائح
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    992: {
+      slidesPerView: 5,
+      spaceBetween: 15,
+    },
+    1200: {
+      slidesPerView: 6,
+      spaceBetween: 15,
+    },
+  },
+});
+
+const swiper = new Swiper(".slide .swiper", {
+  loop: true, // جعل السلايدر يعمل بشكل دائري
+  autoplay: {
+    // التشغيل التلقائي
+    delay: 3000, // تأخير 3 ثواني بين الشرائح
+    disableOnInteraction: false,
+  },
+  navigation: {
+    // أزرار التنقل
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    // النقاط السفلية
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  slidesPerView: 1, // عدد الشرائح المرئية في نفس الوقت
+  spaceBetween: 5, // المسافة بين الشرائح
+});
+
+const swiper2 = new Swiper(".slide2 .swiper", {
+  loop: false, // جعل السلايدر يعمل بشكل دائري
+  speed: 300, // السرعة الأساسية (تتغير حسب حركة الماوس)
+  freeMode: true, // تفعيل وضع الحركة الحرة
+  freeModeMomentum: true, // استمرار الحركة حسب سرعة السحب
+  freeModeMomentumRatio: 1, // زيادة التأثير عند السحب السريع
+  freeModeMomentumBounce: false, // إيقاف الارتداد عند التوقف
+
+  autoplay: {
+    // التشغيل التلقائي
+    delay: 5000, // تأخير 3 ثواني بين الشرائح
+    disableOnInteraction: false,
+  },
+  // المسافة بين الشرائح
+  breakpoints: {
+    320: {
+      // شاشات الموبايل الصغيرة
+      slidesPerView: 3.5,
+      spaceBetween: 10,
+    },
+    480: {
+      // موبايلات متوسطة الحجم
+      slidesPerView: 4.5,
+      spaceBetween: 15,
+    },
+    768: {
+      // التابلت
+      slidesPerView: 4.5,
+      spaceBetween: 15,
+    },
+    992: {
+      // شاشات الكمبيوتر
+      slidesPerView: 6,
+      spaceBetween: 20, // المسافة بين الشرائح
+    },
+    1024: {
+      //  شاشات الكمبيوتر
+      slidesPerView: 8,
+      spaceBetween: 20, // المسافة بين الشرائح
+    },
+  },
+});
+
+const swiper3 = new Swiper(".slide3 .swiper", {
+  loop: false, // عدم جعل السلايدر يعمل بشكل دائري
+  speed: 300, // السرعة الأساسية
+  freeMode: true, // وضع الحركة الحرة
+  freeModeMomentum: true, // استمرار الحركة حسب سرعة السحب
+  freeModeMomentumRatio: 1, // زيادة التأثير عند السحب السريع
+  freeModeMomentumBounce: false, // إيقاف الارتداد عند التوقف
+
+  autoplay: {
+    delay: 4000, // تأخير 4 ثواني بين الشرائح
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    320: {
+      // الهواتف الصغيرة
+      slidesPerView: 1.5,
+      spaceBetween: 8,
+    },
+    480: {
+      // هواتف متوسطة
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    576: {
+      // هواتف كبيرة
+      slidesPerView: 2.5,
+      spaceBetween: 12,
+    },
+    768: {
+      // التابلت
+      slidesPerView: 3.5,
+      spaceBetween: 15,
+    },
+    992: {
+      // شاشات الكمبيوتر الصغيرة
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1200: {
+      // شاشات الكمبيوتر الكبيرة
+      slidesPerView: 6,
+      spaceBetween: 25,
+    },
+  },
+});
+
+const swiper4 = new Swiper(" .products .swiper", {
+  loop: false, // عدم جعل السلايدر يعمل بشكل دائري
+  speed: 300, // السرعة الأساسية
+  freeMode: true, // وضع الحركة الحرة
+  freeModeMomentum: true, // استمرار الحركة حسب سرعة السحب
+  freeModeMomentumRatio: 1, // زيادة التأثير عند السحب السريع
+  freeModeMomentumBounce: false, // إيقاف الارتداد عند التوقف
+
+  autoplay: {
+    delay: 4000, // تأخير 4 ثواني بين الشرائح
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    320: {
+      // الهواتف الصغيرة
+      slidesPerView: 4.5,
+      spaceBetween: 10,
+    },
+    480: {
+      // هواتف متوسطة
+      slidesPerView: 4.5,
+      spaceBetween: 10,
+    },
+    576: {
+      // هواتف كبيرة
+      slidesPerView: 5.5,
+      spaceBetween: 13,
+    },
+    768: {
+      // التابلت
+      slidesPerView: 6,
+      spaceBetween: 15,
+    },
+    992: {
+      // شاشات الكمبيوتر الصغيرة
+      slidesPerView: 7,
+      spaceBetween: 22,
+    },
+    1200: {
+      // شاشات الكمبيوتر الكبيرة
+      slidesPerView: 8,
+      spaceBetween: 23,
+    },
+  },
+});
+
 let allBtn = document.querySelectorAll(".products .btn-group .btn");
 let allProducts = document.querySelectorAll(".products .row .col-md-12 .row");
 
@@ -30,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.getElementById("prev-page");
   const nextButton = document.getElementById("next-page");
 
-  const productsPerPage = 10;
+  const productsPerPage = 16;
   const productsList = document.querySelectorAll(".product-container");
   const totalPages = Math.ceil(productsList.length / productsPerPage);
   let currentPage = 1;
@@ -137,4 +328,22 @@ document.addEventListener("DOMContentLoaded", function () {
   renderPagination();
   updateButtons();
   showPage(currentPage);
+});
+
+const links = document.querySelectorAll(
+  ".products-container .link .category-item a"
+);
+
+const inputs = document.querySelectorAll(
+  ".products-container .link .category-item input"
+);
+
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach((link, index) => {
+  if (link.getAttribute("href") === currentPage) {
+    inputs[index].checked = true;
+  } else {
+    inputs[index].checked = false;
+  }
 });

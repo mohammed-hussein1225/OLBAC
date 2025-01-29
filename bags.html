@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- رابط ملف CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- رابط ملف JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <title>OLBAC | Products</title>
+  </head>
+  <body style="background-color: #f3f3f3">
+    <div id="header-container"></div>
+
+    <!-- nav-filter -->
+    <div class="filter">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="cont">
+              <p>Filter By</p>
+              <select>
+                <option value="default">Default</option>
+                <option value="most_popular">Most Popular</option>
+                <option value="price_low_to_high ">Price Low to High</option>
+                <option value="price_high_to_low ">Price High to Low</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-md-flex">
+            <div class="icons">
+              <i class="fa-solid fa-list list"></i>
+              <i class="fas fa-th-large tables"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- prodcts pages -->
+    <div class="products-container">
+      <div class="container-fluid">
+        <div class="row" style="gap: 8px">
+          <div class="col-md-3 links">
+            <div id="links-container">
+              <div class="link">
+                <div
+                  class="head"
+                  data-bs-target="#coll"
+                  class="btn"
+                  data-bs-toggle="collapse"
+                  aria-expanded="true"
+                >
+                  <p>Category</p>
+                  <i class="fa-solid fa-sort-up"></i>
+                </div>
+                <ul class="collapse show" id="coll">
+                  <li>
+                    <div class="category-item">
+                      <input id="category1" type="checkbox" />
+                      <a href="Photography.html">PHOTOGRAPHY LIGHTING</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category2" type="checkbox" />
+                      <a href="microphone.html">MICROPHONES</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category3" type="checkbox" />
+
+                      <a href="camera.html">CAMERAS</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category4" type="checkbox" />
+
+                      <a href="leneses.html">LENSES</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category5" type="checkbox" />
+
+                      <a href="flashes.html">FLASHES</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category6" type="checkbox" />
+
+                      <a href="memory.html">MEMORY CARDS</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category7" type="checkbox" />
+
+                      <a href="stands.html">STANDS</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category8" type="checkbox" />
+
+                      <a href="bags.html">PHOTOGRAPHY BAGS</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category9" type="checkbox" />
+                      <a href="tent.html">PHOTOGRAPHY TENT</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category10" type="checkbox" />
+
+                      <a href="stabilize.html">STABILIZERS</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="link">
+                <div
+                  class="head"
+                  data-bs-target="#coll2"
+                  class="btn"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                >
+                  <p>Brands</p>
+                  <i class="fa-solid fa-sort-up"></i>
+                </div>
+                <ul class="collapse show" id="coll2">
+                  <li>
+                    <div class="category-item">
+                      <input id="category1" type="checkbox" />
+
+                      <a href="#">PHOTOGRAPHY LIGHTING</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category2" type="checkbox" />
+
+                      <a href="#">MICROPHONES</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category3" type="checkbox" />
+
+                      <a href="#">CAMERAS</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category4" type="checkbox" />
+
+                      <a href="#">LENSES</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category5" type="checkbox" />
+
+                      <a href="#">FLASHES</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category6" type="checkbox" />
+
+                      <a href="#">MEMORY CARDS</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category7" type="checkbox" />
+
+                      <a href="#">STANDS</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category8" type="checkbox" />
+
+                      <a href="#">PHOTOGRAPHY BAGS</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category9" type="checkbox" />
+                      <a href="#">PHOTOGRAPHY TENT</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="category-item">
+                      <input id="category10" type="checkbox" />
+
+                      <a href="#">STABILIZERS</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="link">
+                <div
+                  class="head"
+                  data-bs-target="#coll3"
+                  class="btn"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                >
+                  <p>Brands</p>
+                  <i class="fa-solid fa-sort-up"></i>
+                </div>
+                <ul class="collapse show" id="coll3">
+                  <div class="content">
+                    <div class="input">
+                      <label for="price">From (EGP)</label>
+                      <input type="number" id="price" />
+                    </div>
+                    <div class="input">
+                      <label for="price">To (EGP)</label>
+                      <input type="number" id="price" />
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="container-fluid">
+              <div class="row" id="products-list">
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 product-container col-md-4 col-lg-3">
+                  <div class="card-product">
+                    <div class="product-title">
+                      <a href="#">
+                        <img src="img/pl1.jpg" alt="Product 1" />
+                      </a>
+                      <h3>3-Roller Wall Mounting Manual</h3>
+                    </div>
+                    <div class="product-desc">
+                      <div class="rating">
+                        <p class="price">2,100 EGP</p>
+                        <p>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination">
+              <button id="prev-page">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+              <span id="page-info"></span>
+              <button id="next-page">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-container"></div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      fetch("../sections/header.html")
+        .then((response) => response.text())
+        .then(
+          (data) =>
+            (document.getElementById("header-container").innerHTML = data)
+        );
+
+      fetch("../sections/footer.html")
+        .then((response) => response.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-container").innerHTML = data)
+        );
+    </script>
+  </body>
+</html>
