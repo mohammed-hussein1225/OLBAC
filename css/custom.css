@@ -154,6 +154,7 @@ a {
 
 .navbar .offcanvas {
   background-color: #217594;
+  color: white;
 }
 .offcanvas.offcanvas-start {
   width: 300px;
@@ -208,7 +209,7 @@ a {
   padding: 10px 0;
 }
 .navbar .offcanvas .offcanvas-body .nav-item .nav-link {
-  color: white;
+  color: white !important;
   background-color: #007594;
   animation: none;
 }
@@ -219,7 +220,7 @@ a {
 .navbar .offcanvas .offcanvas-body .dropdwon .dropdown-menu,
 .navbar .offcanvas .offcanvas-body .dropdwon .dropdown-menu li a {
   background-color: black;
-  color: white;
+  color: white !important;
   animation: none;
 }
 .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item.links {
