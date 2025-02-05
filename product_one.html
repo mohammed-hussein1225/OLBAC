@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- رابط ملف CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- رابط ملف JavaScript -->
+    <!-- ...existing code... -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
+    <!-- ...existing code... -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <title>OLBAC | Products</title>
+    <style>
+      .swiper-container {
+        width: 100%;
+        height: 400px; /* يمكن تعديل الارتفاع حسب الحاجة */
+      }
+
+      .swiper-wrapper {
+        display: flex;
+
+        flex-direction: column; /* هنا نضبط الاتجاه ليكون عموديًا */
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        height: 100%;
+      }
+
+      .images .swiper-slide img {
+        width: 40px;
+        border: 1px solid #007594;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      @media (min-width: 320px) and (max-width: 768px) {
+        .images .swiper-slide img {
+          width: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <div class="home_product">
+      <div class="container">
+        <h5 class="mt-4">
+          BOYA BY-PM700 Multipattern USB Microphone (Mac/Windows)
+        </h5>
+        <div class="row">
+          <div class="col-md-8 mt-3">
+            <div class="row">
+              <div class="col-md-3 d-none d-md-flex">
+                <div class="images">
+                  <div class="swiper-container" style="overflow-x: hidden">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="images/pro2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro3.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="zoom-div"></div>
+                <div class="big-image" style="width: 50%; height: 50%">
+                  <img src="img/pl16.jpg" id="zoom-image" style="width: 100%" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="item_1">
+              <div class="image">
+                <img src="img/622a12bd4ce5f_BOYA.jpg" style="width: 200px" />
+              </div>
+              <div class="item_2">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      const smallsImg = document.querySelectorAll(".swiper-slide img");
+      const bigsImg = document.querySelector(".big-image img");
+
+      smallsImg.forEach((img) => {
+        img.addEventListener("click", () => {
+          bigsImg.src = img.src;
+
+          $("#zoom-image").data("elevateZoom").swaptheimage(img.src, img.src);
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#zoom-image").elevateZoom({
+          zoomType: "window",
+          cursor: "crosshair",
+          zoomWindowFadeIn: 500,
+          zoomWindowFadeOut: 750,
+          zoomWindowPosition: 1,
+          zoomWindowWidth: 600,
+          zoomWindowHeight: 350,
+          borderSize: 1,
+          borderColor: "#ccc",
+        });
+      });
+    </script>
+    <script>
+      const swiper6 = new Swiper(".home_product .swiper-container", {
+        direction: "vertical",
+        loop: false, // عدم جعل السلايدر يعمل بشكل دائري
+        speed: 300, // السرعة الأساسية
+        freeMode: true, // وضع الحركة الحرة
+        freeModeMomentum: true, // استمرار الحركة حسب سرعة السحب
+        freeModeMomentumRatio: 1, // زيادة التأثير عند السحب السريع
+        freeModeMomentumBounce: false, // إيقاف الارتداد عند التوقف
+        autoplay: {
+          delay: 4000, // تأخير 4 ثواني بين الشرائح
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 4.5,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 4.5,
+            spaceBetween: 10,
+          },
+          576: {
+            slidesPerView: 5.5,
+            spaceBetween: 13,
+          },
+          768: {
+            slidesPerView: 6,
+            spaceBetween: 15,
+          },
+          992: {
+            slidesPerView: 7,
+            spaceBetween: 22,
+          },
+          1200: {
+            slidesPerView: 8,
+            spaceBetween: 23,
+          },
+        },
+      });
+    </script>
+    <script>
+      fetch("../sections/header.html")
+        .then((response) => response.text())
+        .then(
+          (data) =>
+            (document.getElementById("header-container").innerHTML = data)
+        );
+
+      fetch("../sections/footer.html")
+        .then((response) => response.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-container").innerHTML = data)
+        );
+    </script>
+  </body>
+</html>

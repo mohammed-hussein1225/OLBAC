@@ -16,6 +16,24 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <title>OLBAC</title>
+    <style>
+      .control-phone .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .control-phone .row .col {
+        text-align: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .control-phone .row .col p {
+        font-size: 12px;
+      }
+      .control-phone .row .col.active {
+        color: #007594 !important;
+      }
+    </style>
   </head>
   <body>
     <!-- footer -->
@@ -135,13 +153,86 @@
             ><a href="#"><img src="images/mini-footer/Visa.png" alt="" /></a
             ><a href="#"><img src="images/mini-footer/w-cash.png" alt="" /></a>
           </div>
-          <div class="col-md-12 col-lg-12">
+          <div class="col-md-12 col-lg-12" style="margin-bottom: 55px">
             <div class="text-sub">
               <p>
                 This Website Following General Photographic Industry
                 <a href="#"
                   ><img src="images/mini-footer/general.png" alt="" />
                 </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- control the phone -->
+    <div class="control-phone d-md-none bg-light fixed-bottom start-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col active">
+            <a href="../index.html">
+              <i class="fa-solid fa-house"></i>
+              <p>HOME</p>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#Modal" data-bs-toggle="modal">
+              <i class="fa-solid fa-user"></i>
+              <p>My Account</p>
+            </a>
+          </div>
+          <div class="col">
+            <a href="../cart.html">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <p>Cart</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="Modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close text-white"
+            data-bs-dismiss="modal"
+          ></button>
+          <div class="modal-body">
+            <h3 class="text-center">Welcom Back!</h3>
+            <p class="text-center mt-4">Sign Up By Entering These Data</p>
+            <div class="container">
+              <form>
+                <input
+                  type="email"
+                  autocomplete="current-email"
+                  class="w-100"
+                  placeholder="Email"
+                />
+                <input
+                  type="password"
+                  autocomplete="current-password"
+                  class="w-100"
+                  placeholder="Password"
+                />
+              </form>
+              <button class="btn w-100">Login</button>
+              <a href="#" class="Forgot">Forgot Password?</a>
+              <p class="text-center">
+                Login With
+
+                <span class="d-block">
+                  <a href="#">
+                    <i class="fa-brands fa-google"></i>
+                  </a>
+                </span>
+              </p>
+              <p class="text-center">
+                Dont Hav Any Account?
+                <a href="#"> Register Now! </a>
               </p>
             </div>
           </div>

@@ -11,24 +11,10 @@
 
     <!-- رابط ملف JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/custom.css" />
     <title>OLBAC | Products</title>
-    <style>
-      .cart .container ul {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .cart .row {
-        border: 1px solid #ccc;
-        border-bottom: none;
-        border-radius: 10px 10px 0 0;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <div id="header-container"></div>
@@ -38,91 +24,68 @@
       <a href="#"> <button class="btn btn-dark">My order</button></a>
     </div>
 
-    <!-- <div class="cart">
-      <div class="container">
-        <ul>
-          <li>Image</li>
-          <li>Description</li>
-          <li class="ms-5">Quantity:</li>
-          <li>Price</li>
-          <li>Sub Total</li>
-        </ul>
-        <div class="row">
-          <div class="col-md-2">
-            <img src="img/pl1.jpg" width="80%" />
-          </div>
-          <div class="col-md-4 pt-3 align-items-center justify-content-center">
-            <p class="fw-bold">
-              Godox XPro II TTL Wireless Flash Trigger for Sony Cameras
-            </p>
-            <div
-              class="cont d-flex align-items-center gap-5 justify-content-between"
-            >
-              <div class="item">
-                <i class="fa-regular fa-heart text-danger"></i>
-                <a href="#">Move To Saved Item</a>
-              </div>
-              <div class="item">
-                <i class="fa-solid fa-trash"></i>
-                <a href="#">remove </a>
-              </div>
+    <div id="cart-box"></div>
+
+    <div class="container text-center">
+      <div class="total">
+        <p>Total</p>
+        <p class="total_price"></p>
+      </div>
+      <button
+        class="btn check w=-100"
+        data-bs-toggle="modal"
+        data-bs-target="#Modal"
+      >
+        Checkout
+      </button>
+    </div>
+
+    <div class="modal fade" id="Modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close text-white"
+            data-bs-dismiss="modal"
+          ></button>
+          <div class="modal-body">
+            <h3 class="text-center">Welcom Back!</h3>
+            <p class="text-center mt-4">Sign Up By Entering These Data</p>
+            <div class="container">
+              <form>
+                <input
+                  type="email"
+                  autocomplete="current-email"
+                  class="w-100"
+                  placeholder="Email"
+                />
+                <input
+                  type="password"
+                  autocomplete="current-password"
+                  class="w-100"
+                  placeholder="Password"
+                />
+              </form>
+              <button class="btn w-100">Login</button>
+              <a href="#" class="Forgot">Forgot Password?</a>
+              <p class="text-center">
+                Login With
+
+                <span class="d-block">
+                  <a href="#">
+                    <i class="fa-brands fa-google"></i>
+                  </a>
+                </span>
+              </p>
+              <p class="text-center">
+                Dont Hav Any Account?
+                <a href="#"> Register Now! </a>
+              </p>
             </div>
-          </div>
-          <div
-            class="col-md-2 pt-3 text-center"
-            style="border-right: 1px solid #ced5e1"
-          >
-            <label for="inp " class="d-inline-block">Quantity: </label>
-            <input
-              type="number"
-              name="inp"
-              class="w-25 d-block mt-2"
-              style="margin: 0 auto"
-            />
-          </div>
-          <div
-            class="col-md-2 text-center my-auto"
-            style="border-right: 1px solid #ced5e1"
-          >
-            <p
-              class="price_1"
-              style="
-                color: #007594;
-                font-weight: bold;
-                font-size: 13pt;
-                white-space: nowrap;
-              "
-            >
-              3,999 EGP
-            </p>
-            <p
-              class="price_2"
-              style="
-                color: #898989;
-                font-size: 11pt;
-                white-space: nowrap;
-                text-decoration: line-through !important;
-              "
-            >
-              3999.00 EGP
-            </p>
-          </div>
-          <div class="col-md-2 text-center my-auto">
-            <p
-              class="sup-total"
-              style="
-                color: #007594;
-                font-weight: bold;
-                font-size: 13pt;
-                white-space: nowrap;
-              "
-            >
-              3,999 EGP
-            </p>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div id="footer-container"></div>
     <script src="js/bootstrap.bundle.js"></script>
