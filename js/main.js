@@ -207,8 +207,8 @@ allBtn.forEach((btn) => {
   });
 });
 
-var smallImg = document.querySelectorAll(".swiper-slide img");
-var bigImg = document.querySelector(".box-img img");
+let smallImg = document.querySelectorAll(".swiper-slide img");
+let bigImg = document.querySelector(".box-img img");
 
 smallImg.forEach(function (img) {
   img.addEventListener("click", function (event) {
@@ -219,29 +219,6 @@ smallImg.forEach(function (img) {
 const links = document.querySelectorAll(
   ".products-container .link .category-item a"
 );
-
-const inputs = document.querySelectorAll(
-  ".products-container .link .category-item input"
-);
-
-const currentPage = window.location.pathname.split("/").pop();
-
-inputs.forEach((input, index) => {
-  const link = links[index];
-
-  if (link.getAttribute("href") === currentPage) {
-    input.checked = true;
-  } else {
-    input.checked = false;
-  }
-
-  // إضافة حدث عند تغيير حالة الـ checkbox
-  input.addEventListener("change", function () {
-    if (!this.checked) {
-      window.location.href = "product.html"; // التوجيه إلى صفحة product.html عند إلغاء التحديد
-    }
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const product_card = document.querySelectorAll(".products #card-box-home");
@@ -435,7 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return `
          <div class="col-6 product-container col-md-4 col-lg-3">
           <div class="card">
-            <a href="product.html"> <img src="${randomImage} " /></a>
+            <a href="product_one.html"> <img src="${randomImage} " data-price="${randomPrice} "data-image="${randomImage} "/></a>
               <h3>Roller Wall Mounting Manual</h3>
                <div class="card-body">
                     <div class="card-desc">
@@ -448,7 +425,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <i class="fa-solid fa-star"></i>
                       </p>
                     </div>
-                    <div class="icons" data-price=${randomPrice} data-image=${randomImage}>
+                    <div class="icons" data-price="${randomPrice}" data-image="${randomImage}">
                       <div class="icon  icon-cart">
                         <i class="fa-solid fa-cart-shopping fa-2x d-block"></i>
                       </div>
@@ -461,6 +438,21 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `;
     }).join("");
+
+    const productImages = document.querySelectorAll("#products-list img");
+
+    if (productImages.length > 0) {
+      productImages.forEach((img) => {
+        img.addEventListener("click", function () {
+          let image = this.dataset.image; // استخراج رابط الصورة
+          let price = this.dataset.price; // استخراج السعر
+
+          // حفظ البيانات في Local Storage
+          localStorage.setItem("selectedImage", image);
+          localStorage.setItem("selectedPrice", price);
+        });
+      });
+    }
 
     const productsList = document.querySelectorAll(".product-container");
 
@@ -587,8 +579,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedValue = this.value; // الحصول على الخيار الذي تم اختياره
 
       let url = "product.html"; // الرابط الافتراضي
-
-      if (selectedValue === "most_popular") {
+      if (selectedValue == " Default") {
+        url = "product.html";
+      } else if (selectedValue === "most_popular") {
         url = "product.html?filter=most_popular";
       } else if (selectedValue === "price_low_to_high ") {
         url = "product.html?filter=price_low_to_high";
@@ -804,4 +797,96 @@ document.addEventListener("DOMContentLoaded", function () {
   displayCart();
 
   cart();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var categoryItems = document.querySelectorAll("#coll2 .category-item");
+
+  categoryItems.forEach(function (item) {
+    var link = item.querySelector("a");
+    var checkbox = item.querySelector("input[type='checkbox']");
+
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      if (checkbox) {
+        checkbox.checked = true; // تحديد الـ checkbox قبل الانتقال
+      }
+
+      var filterValue = link.textContent
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "_");
+
+      // حفظ الفلتر المحدد في localStorage
+      localStorage.setItem("selectedFilter", filterValue);
+
+      var baseUrl = window.location.origin + window.location.pathname;
+      var newUrl = baseUrl + "?filter=" + encodeURIComponent(filterValue);
+
+      // إعادة تحميل الصفحة مع الفلتر الجديد
+      window.location.href = newUrl;
+    });
+  });
+
+  // عند تحميل الصفحة، قراءة الفلتر من URL وتحديد الـ checkbox المناسب
+  var urlParams = new URLSearchParams(window.location.search);
+  var currentFilter = urlParams.get("filter");
+
+  if (currentFilter) {
+    categoryItems.forEach(function (item) {
+      var link = item.querySelector("a");
+      var checkbox = item.querySelector("input[type='checkbox']");
+      var linkText = link.textContent.trim().toLowerCase().replace(/\s+/g, "_");
+
+      if (linkText === currentFilter && checkbox) {
+        checkbox.checked = true; // تحديد الـ checkbox بعد إعادة تحميل الصفحة
+      }
+    });
+  }
+
+  // **مسح الفلتر المخزن بعد تحميل الصفحة**
+  window.addEventListener("load", function () {
+    localStorage.removeItem("selectedFilter");
+  });
+});
+
+const inputs = document.querySelectorAll(
+  ".products-container  .link #coll .category-item input"
+);
+
+const currentPage = window.location.pathname.split("/").pop();
+
+inputs.forEach((input, index) => {
+  const link = links[index];
+
+  if (link.getAttribute("href") === currentPage) {
+    input.checked = true;
+  } else {
+    input.checked = false;
+  }
+
+  // إضافة حدث عند تغيير حالة الـ checkbox
+  input.addEventListener("change", function () {
+    if (!this.checked) {
+      window.location.href = "product.html"; // التوجيه إلى صفحة product.html عند إلغاء التحديد
+    }
+  });
+});
+let allBtns = document.querySelectorAll(".btn-group .btn");
+let allDetails = document.querySelectorAll(".container .detials");
+
+allBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // إزالة كلاس active من جميع الأزرار
+    allBtns.forEach((button) => button.classList.remove("active"));
+    // إضافة كلاس active للزرار الذي تم الضغط عليه
+    btn.classList.add("active");
+
+    // إخفاء جميع المنتجات
+    allDetails.forEach((product) => product.classList.add("d-none"));
+    // إظهار المنتجات المرتبط بالزرار
+    let targetproduct = document.querySelector(btn.dataset.target);
+    targetproduct.classList.remove("d-none");
+  });
 });

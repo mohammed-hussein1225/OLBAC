@@ -763,17 +763,17 @@ a {
   width: 100px !important;
 }
 
-.products .col-lg-8 .box-btn {
+.box-btn {
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 50px;
 }
-.products .col-lg-8 .box-btn .btn-group .btn {
+.box-btn .btn-group .btn {
   background-color: #f0f2f7 !important;
   border: none;
   color: #0d6efd;
   margin-right: 5px;
 }
-.products .col-lg-8 .btn-group .btn.active {
+.box-btn .btn-group .btn.active {
   background-color: #ffffff !important;
   color: #495057;
   border: 1px solid #dee2e6;

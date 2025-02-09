@@ -17,20 +17,21 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
     <title>OLBAC | Products</title>
     <style>
-      .swiper-container {
+      .home_product .swiper-container {
         width: 100%;
         height: 400px; /* يمكن تعديل الارتفاع حسب الحاجة */
       }
 
-      .swiper-wrapper {
+      .home_product .swiper-wrapper {
         display: flex;
 
         flex-direction: column; /* هنا نضبط الاتجاه ليكون عموديًا */
       }
 
-      .swiper-slide {
+      .home_product .swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,15 +39,86 @@
         height: 100%;
       }
 
-      .images .swiper-slide img {
+      .home_product .images .swiper-slide img {
         width: 40px;
         border: 1px solid #007594;
         border-radius: 10px;
         cursor: pointer;
       }
+      .home_product .item_1 p {
+        color: #217594;
+        font-size: 30px;
+        margin-left: 15px;
+        margin-top: -20px;
+      }
+      .home_product .item_2 .icon {
+        padding-left: 15px;
+        display: flex;
+      }
+      .swiper-container {
+        scrollbar-width: none;
+      }
+      .home_product .item_2 .icon svg {
+        font-size: 22px;
+        padding-left: 8px;
+        margin-top: 35px;
+      }
+      .home_product .item_2 .icon svg:last-of-type {
+        color: red;
+        cursor: pointer;
+      }
+      .social-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .social-buttons .btn {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+      .icon_star svg {
+        color: #ccc;
+        font-size: 12px;
+      }
 
+      .item_4 {
+        background-color: #f0f2f7;
+        margin-top: 20px;
+        padding: 10px;
+
+        text-align: center;
+      }
+      .item_4 .btn:first-of-type {
+        width: 80%;
+        background-color: #198754;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 10px 3px;
+      }
+      .item_4 .btn:first-of-type:hover,
+      .item_4 .btn:first-of-type:hover {
+        background-color: #198754;
+        color: white;
+      }
+      .item_4 .btn:last-of-type {
+        width: 80%;
+        margin-top: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px 3px;
+        border: 1px solid;
+        outline: none;
+        color: #000;
+      }
       @media (min-width: 320px) and (max-width: 768px) {
-        .images .swiper-slide img {
+        .home_product .images .swiper-slide img {
           width: 60px;
         }
       }
@@ -55,7 +127,7 @@
   <body>
     <div id="header-container"></div>
 
-    <div class="home_product">
+    <div class="home_product mb-5">
       <div class="container">
         <h5 class="mt-4">
           BOYA BY-PM700 Multipattern USB Microphone (Mac/Windows)
@@ -74,24 +146,37 @@
                         <img src="images/pro3.jpg" />
                       </div>
                       <div class="swiper-slide">
-                        <img src="images/pro3.jpg" />
+                        <img src="images/pro4.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro5.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro6.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="images/pro7.jpg" />
                       </div>
                       <div class="swiper-slide">
                         <img src="images/pro3.jpg" />
                       </div>
                       <div class="swiper-slide">
-                        <img src="images/pro3.jpg" />
+                        <img src="images/pro8.jpg" />
                       </div>
                       <div class="swiper-slide">
-                        <img src="images/pro3.jpg" />
+                        <img src="images/pro9.jpg" />
                       </div>
                       <div class="swiper-slide">
-                        <img src="images/pro3.jpg" />
+                        <img src="img/pl6.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="img/pl7.jpg" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-md-9">
                 <div class="zoom-div"></div>
                 <div class="big-image" style="width: 50%; height: 50%">
@@ -100,15 +185,312 @@
               </div>
             </div>
           </div>
+
           <div class="col-md-4">
-            <div class="item_1">
-              <div class="image">
-                <img src="img/622a12bd4ce5f_BOYA.jpg" style="width: 200px" />
+            <div class="cont d-flex justify-content-between">
+              <div class="item_1">
+                <div class="image">
+                  <img src="img/622a12bd4ce5f_BOYA.jpg" style="width: 150px" />
+                  <p id="home-price">3999</p>
+                </div>
               </div>
               <div class="item_2">
-                <p></p>
+                <div class="icon">
+                  <i
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalLink"
+                    class="fa-solid fa-share-nodes"
+                  ></i>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="icon_star mt-3">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
               </div>
             </div>
+            <div class="item_3">
+              <p>Shipping 2-5 days based on area</p>
+              <img src="img/image.png" style="width: 250px" />
+            </div>
+
+            <div class="item_4 pt-4 text-center">
+              <button class="btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <b>Add To cart</b>
+              </button>
+
+              <button class="btn">
+                <i class="fa-regular fa-heart"></i>
+                <b>Add To Wish list</b>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="box-btn" style="margin-bottom: 20px">
+        <div class="btn-group">
+          <div class="btn btn-outline-dark active" data-target="#Details">
+            Details
+          </div>
+          <div class="btn btn-outline-dark" data-target="#Product_Video">
+            Product Video
+          </div>
+          <div class="btn btn-outline-dark" data-target="#Warranty">
+            Warranty
+          </div>
+        </div>
+      </div>
+
+      <div class="detials" id="Details">
+        <p>Details</p>
+        <p>
+          Ideal for studio, film, TV, and especially location shooting, the 3.57
+          x 2.6 x 2.6"&nbsp;<strong>MOLUS G60 Pocket COB Monolight</strong
+          >&nbsp;from&nbsp;<strong>Zhiyun&nbsp;</strong>has COB LEDs and boasts
+          a host of professional features in a very small package. The G60 has a
+          wide variable color range of 2700 to 6500K with high CRI/TLCI 96/97
+          ratings and dims from 0 to 100%. Color and brightness can be adjusted
+          on the fixture, but you can also make changes wirelessly using
+          Zhiyun's app.
+        </p>
+
+        <p>
+          The G60 includes a multi-voltage AC adapter, power adapter organizer
+          bag, and reflector. With the purchase of an optional USB-C charging
+          cable, you can use PD technology to quickly power an optional attached
+          battery for wireless use.
+        </p>
+
+        <p>Zhiyun MOLUS G60 Mini/Pocket COB Light</p>
+
+        <p>
+          The MOLUS G60 has 60W of power output supported by innovative cooling
+          technology while serving as a universal film light.
+        </p>
+
+        <p>Pro Lighting within Your Hand</p>
+
+        <p>
+          Weighing only 10.6 oz and as small as a Rubik's Cube, the G60 brings
+          you a brand-new lighting experience without cumbersome burdens.
+        </p>
+
+        <p>DynaVort Cooling System</p>
+
+        <p>
+          The G60 employs its DynaVort Cooling System consisting of gyroscope
+          modeling heat sinks and FOC fans to prevent overheating. The DynaVort
+          technology is based on the fluid dynamics and attitude-control
+          algorithm, significantly raising the cooling efficiency through
+          intelligent control over airflow emissions.
+        </p>
+
+        <p>Adaptive Power Supply System</p>
+
+        <p>
+          The adaptive integrated power supply system provides two charging
+          solutions. You can either charge G60 via the supplied DC power adapter
+          or an optional USB-C cable for fast charging which allows input power
+          monitoring.
+        </p>
+
+        <p>High CRI and TLCI</p>
+
+        <p>
+          With a CRI of 96 and a TLCI of 97, the light gives you accurate color
+          allowing you to easily adjust accurate color and brightness.
+        </p>
+
+        <p>Live Stream</p>
+
+        <p>
+          Zhiyun helps you build your own professional live stream studio with
+          lighter, smaller, yet brighter equipment, thwarting location
+          restrictions while bringing up-to-date lighting effects.
+        </p>
+
+        <p>Bluetooth for Efficient Remote Control</p>
+
+        <p>
+          No more fear of complicated setups and crew shortage. The G60 has
+          onboard Bluetooth mesh control via its app, letting you explore
+          wireless possibilities.
+        </p>
+
+        <br />
+        <p>General Details</p>
+
+        <p>Key Features</p>
+
+        <ul style="list-style: circle">
+          <li>For Studio and Film/TV Production</li>
+          <li>Output: 2428 Lux at 3.3' (6500K)</li>
+          <li>Color: 2700 to 6500K</li>
+          <li>X100 Grip Battery</li>
+        </ul>
+      </div>
+
+      <div class="detials d-none" id="Product_Video">
+        <p style="text-align: center">Product Video</p>
+        <iframe
+          width="100%"
+          height="340"
+          src="https://www.youtube.com/embed/VzZnX8tEmNY"
+          frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+
+      <div class="detials d-none" id="Warranty">
+        <p style="padding: 0">
+          14-day return and replacement guarantee against manufacturing defects
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalLink"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="links">
+              <div class="social-buttons">
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                  class="btn btn-primary"
+                  target="_blank"
+                  style="background-color: rgb(13 110 253)"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://twitter.com/intent/tweet?url=YOUR_URL"
+                  class="btn btn-info"
+                  target="_blank"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="mailto:?subject=Check this out&body=YOUR_URL"
+                  class="btn btn-secondary"
+                >
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send?text=YOUR_URL"
+                  class="btn btn-success"
+                  target="_blank"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a
+                  href="https://t.me/share/url?url=YOUR_URL"
+                  class="btn btn-primary"
+                  target="_blank"
+                  style="background-color: rgb(13 110 253)"
+                >
+                  <i class="fab fa-telegram-plane"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand my-2">
+      <div class="swiper brand-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="product.html"> <img src="images/bra1.jpg" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra2.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra3.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra4.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra5.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra6.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra7.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra8.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra9.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra10.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra11.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra12.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra13.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra15.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra16.jpg" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <img src="images/bra14.jpg" />
+            </a>
           </div>
         </div>
       </div>
@@ -189,6 +571,22 @@
       });
     </script>
     <script>
+      function change() {
+        let savedImage = localStorage.getItem("selectedImage");
+        let savedPrice = localStorage.getItem("selectedPrice");
+
+        let homeImage = document.getElementById("zoom-image");
+        let homeprice = document.getElementById("home-price");
+        if (homeImage && savedImage) {
+          homeImage.setAttribute("src", savedImage);
+        }
+        if (homeprice && savedPrice) {
+          homeprice.innerHTML = savedPrice;
+        }
+
+        console.log("✅ استرجاع البيانات:", { savedImage, savedPrice });
+      }
+      change();
       fetch("sections/header.html")
         .then((response) => response.text())
         .then(
