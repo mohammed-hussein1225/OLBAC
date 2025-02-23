@@ -225,6 +225,7 @@ const inputs = document.querySelectorAll(
 );
 
 const currentPage = window.location.pathname.split("/").pop();
+console.log(currentPage);
 
 inputs.forEach((input, index) => {
   const link = links[index];
@@ -341,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <i class="fa-solid fa-cart-shopping fa-2x d-block"></i>
                       </div>
                       <div class="icon">
-                        <i class="fa-solid fa-heart d-block fa-2x"></i>
+                        <i class="fa-regular fa-heart d-block fa-2x"></i>
                       </div>
                     </div>
                   </div>
@@ -453,7 +454,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <i class="fa-solid fa-cart-shopping fa-2x d-block"></i>
                       </div>
                       <div class="icon icon-cart">
-                        <i class="fa-solid fa-heart d-block fa-2x"></i>
+                        <i class="fa-regular fa-heart d-block fa-2x"></i>
                       </div>
                     </div>
                   </div>
